@@ -2,14 +2,28 @@
 
 int main(){
 
-    int a;
-    float b,c;
+    int a, b;
+    char ch;
 
-    a = 4;
-    b = 3.141592;
-    c = 15.1;
+    scanf("%d %d %c", &a, &b, &ch);
 
-    printf("a = %d\nb = %f\nc = %.1f", a, b, c);
-
+    switch (ch){
+        case '+' :
+        printf("%d + %d = %d\n",a, b, a+b);
+        break;
+        case '-' :
+        printf("%d - %d = %d\n",a, b, a-b);
+        break;
+        case '*' :
+        printf("%d * %d = %d\n",a, b, a*b);
+        break;
+        case '/' :
+        printf("%d / %d = %d\n",a, b, a/b);
+        break;
+        default :
+        printf("해당하는 연산자가 없습니다.\n");
+        break;
+    }
     return 0;
 }
+
